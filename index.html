@@ -14,7 +14,14 @@
 
 <body>
 
+    <nav>
+        <button class="menuToggler">
+            <i class="fal fa-bars"></i>
+        </button>
+    </nav>
+
     <div class="main">
+        
 
 
 
@@ -22,10 +29,17 @@
         <div class="sidebar">
             <ul class="links">
                 <li>
-                    <a href="">Dashboard</a>
+                    <a href="">
+                        <i class="fal fa-tachometer-alt-fast"></i>
+                        Dashboard
+                    </a>
                 </li>
                 <li>
-                    <a href="">Pages</a>
+                    <a href="#">
+                        <i class="fal fa-toilet-paper"></i>
+                        Pages
+                        <i class="fal fa-chevron-down arrow"></i>
+                    </a>
                     <ul>
                         <li>
                             <a href="">Page First</a>
@@ -39,10 +53,16 @@
                     </ul>
                 </li>
                 <li>
-                    <a href="">About</a>
+                    <a href="">
+                        <i class="fal fa-address-card"></i>
+                        About
+                    </a>
                 </li>
                 <li>
-                    <a href="">Contact</a>
+                    <a href="">
+                        <i class="fal fa-envelope-open-text"></i>
+                        Contact
+                    </a>
                 </li>
             </ul>
         </div>
@@ -51,7 +71,38 @@
 
 
         <!-- Content -->
+
         <div class="content">
+
+            <div class="container bg-white p-4">
+
+                <h1 class="display-4 mb-5 font-weight-bold">Register Form</h1>
+                <div class="row">
+
+                    <div class="col-12 col-md-6 mb-4">
+                        <label for="">First name</label>
+                        <input class="form-control form-control-lg">
+                    </div>
+                    <div class="col-12 col-md-6 mb-4">
+                        <label for="">Last name</label>
+                        <input class="form-control form-control-lg">
+                    </div>
+                    <div class="col-12 col-md-6 mb-4">
+                        <label for="">Email</label>
+                        <input type="email" class="form-control form-control-lg">
+                    </div>
+                    <div class="col-12 col-md-6 mb-4">
+                        <label for="">Password</label>
+                        <input type="password" class="form-control form-control-lg">
+                    </div>
+
+                    <div class="col-12 d-flex justify-content-end mt-4">
+                        <button class="btn btn-success btn-lg rounded-pill px-5">Register</button>
+                    </div>
+
+                </div>
+
+            </div>
 
         </div>
         <!-- / Content -->

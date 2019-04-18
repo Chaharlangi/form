@@ -1,0 +1,15 @@
+
+@mixin trans {
+    transition: 250ms;
+}
+
+@mixin size($w, $h) {
+    width: $w;
+    height: $h;
+}
+
+@mixin  eqSize($s) {
+    width: $s;
+    height: $s;
+}
+

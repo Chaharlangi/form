@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Quicksand:400,700');
+@import 'mixins';
+
+$brandColor: #0e1726;
 
 html {
     height: 101%;
@@ -13,20 +16,102 @@ body {
     box-sizing: border-box;
 }
 
+nav {
+    padding: 30px;
+    position: absolute;
+    width: 100%;
+    z-index: 9;
+    .menuToggler {
+        @include eqSize(70px);
+        font-size: 25px;
+        background: #fff;
+        border-radius: 100%;
+        border: 0;
+        
+    }
+}
 
 .main {
     display: flex;
     min-height: 100vh;
+
     .sidebar {
-        background: #fff;
+        background: $brandColor;
+        color: #fff;
         min-width: 300px;
         z-index: 8;
+        margin-left: -300px;
+
+        &.opened {
+            margin-left: 0;
+        }
+
         @media (max-width: 992px) {
             position: fixed;
             height: 100vh;
 
             // You must change this to SHOW or HIDE sidebar
             left: -300px;
+            &.opened {
+                left: 0;
+            }
         }
+
+        .links {
+            padding: 0;
+            margin-top: 130px;
+
+            li {
+                list-style: none;
+
+                a {
+                    color: #fff;
+                    display: flex;
+                    align-items: center;
+                    padding: 15px 35px;
+                    opacity: .5;
+                    font-size: 18px; 
+                    font-weight: bold;
+                    @include trans;
+
+                    &:hover {
+                        opacity: 1;
+                        text-decoration: none;
+                    }
+
+                    i {
+                        padding-right: 20px;
+                        font-size: 25px; 
+                        opacity: .5;
+                    }
+
+                    .arrow {
+                        font-size: 16px;
+                        opacity: 1;
+                        margin-left: auto;
+                    }
+                }
+
+                ul {
+                    background: rgba(#000, .2);
+                    padding: 10px 0;
+                    display: none;
+
+                    &.opened {
+                        display: block;
+                    }
+
+                    a {
+                        padding: 10px 35px;
+                    }
+                }
+
+            }
+        }
+    }
+
+    .content {
+        width: 100%;
+        padding: 30px 50px;
     }
 }
