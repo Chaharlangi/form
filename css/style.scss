@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand:400,700');
+
+html {
+    height: 101%;
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    background: rgb(238, 238, 243);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
+.main {
+    display: flex;
+    min-height: 100vh;
+    .sidebar {
+        background: #fff;
+        min-width: 300px;
+        z-index: 8;
+        @media (max-width: 992px) {
+            position: fixed;
+            height: 100vh;
+
+            // You must change this to SHOW or HIDE sidebar
+            left: -300px;
+        }
+    }
+}
