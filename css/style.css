@@ -140,4 +140,9 @@ nav .menuToggler.toggle {
   width: 100%;
   padding: 30px 50px;
 }
+
+.passLaws .passed {
+  color: green;
+  font-weight: bold;
+}
 /*# sourceMappingURL=style.css.map */
