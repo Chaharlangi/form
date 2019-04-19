@@ -27,6 +27,13 @@ nav .menuToggler {
   background: #fff;
   border-radius: 100%;
   border: 0;
+  -webkit-transition: 250ms;
+  transition: 250ms;
+}
+
+nav .menuToggler.toggle {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 
 .main {
@@ -42,6 +49,8 @@ nav .menuToggler {
   min-width: 300px;
   z-index: 8;
   margin-left: -300px;
+  -webkit-transition: 250ms;
+  transition: 250ms;
 }
 
 .main .sidebar.opened {
@@ -99,16 +108,28 @@ nav .menuToggler {
   font-size: 16px;
   opacity: 1;
   margin-left: auto;
+  padding: 0;
+  -webkit-transition: 250ms;
+  transition: 250ms;
+}
+
+.main .sidebar .links li a .arrow.opened {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 
 .main .sidebar .links li ul {
   background: rgba(0, 0, 0, 0.2);
-  padding: 10px 0;
-  display: none;
+  max-height: 0;
+  padding: 0;
+  overflow: hidden;
+  -webkit-transition: 250ms;
+  transition: 250ms;
 }
 
 .main .sidebar .links li ul.opened {
-  display: block;
+  padding: 10px 0;
+  max-height: 1000px;
 }
 
 .main .sidebar .links li ul a {

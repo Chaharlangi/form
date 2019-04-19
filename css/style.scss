@@ -27,7 +27,10 @@ nav {
         background: #fff;
         border-radius: 100%;
         border: 0;
-        
+        @include trans;
+        &.toggle {
+            transform: rotate(180deg)
+        }
     }
 }
 
@@ -41,6 +44,7 @@ nav {
         min-width: 300px;
         z-index: 8;
         margin-left: -300px;
+        @include trans;
 
         &.opened {
             margin-left: 0;
@@ -89,16 +93,23 @@ nav {
                         font-size: 16px;
                         opacity: 1;
                         margin-left: auto;
+                        padding: 0;
+                        @include trans;
+                        &.opened {
+                            transform: rotate(180deg)
+                        }
                     }
                 }
 
                 ul {
                     background: rgba(#000, .2);
-                    padding: 10px 0;
-                    display: none;
-
+                    max-height: 0;
+                    padding: 0;
+                    overflow: hidden;
+                    @include trans;
                     &.opened {
-                        display: block;
+                        padding: 10px 0;
+                        max-height: 1000px;
                     }
 
                     a {
